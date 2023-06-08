@@ -18,6 +18,7 @@ model = main()
 model = model.to('cpu')
 
 def test():
+    model.eval()
     inputs, label = random.choice(val_dataset)
     inputs = inputs.unsqueeze(0)
     outputs = model(inputs)
