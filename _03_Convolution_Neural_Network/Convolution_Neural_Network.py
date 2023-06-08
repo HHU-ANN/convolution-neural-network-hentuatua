@@ -152,7 +152,8 @@ def read_data():
     return dataset_train, dataset_val, data_loader_train, data_loader_val
 
 def main():
-    model = NeuralNetwork(Bottleneck, [3, 4, 6, 3], num_classes=10, include_top=True).to('cpu') # 若有参数则传入参数
+    model = NeuralNetwork(Bottleneck, [3, 4, 6, 3], num_classes=10, include_top=True) # 若有参数则传入参数
+    model = model.to('cpu')
     current_dir = os.path.dirname(os.path.abspath(__file__))
     parent_dir = os.path.dirname(current_dir)
     model.load_state_dict(torch.load(parent_dir + '/pth/model.pth'))
