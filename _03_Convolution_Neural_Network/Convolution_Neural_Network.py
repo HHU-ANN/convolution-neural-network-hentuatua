@@ -145,9 +145,6 @@ class NeuralNetwork(nn.Module):
 def read_data():
     # 这里可自行修改数据预处理，batch大小也可自行调整
     # 保持本地训练的数据读取和这里一致
-    def read_data():
-    # 这里可自行修改数据预处理，batch大小也可自行调整
-    # 保持本地训练的数据读取和这里一致
     transform = transforms.Compose([
         transforms.Pad(4),
         transforms.RandomHorizontalFlip(),
